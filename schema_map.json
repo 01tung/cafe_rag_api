@@ -1,0 +1,72 @@
+{
+  "source_file": "cafes.json",
+  "id_field": "id",
+
+  "fields": {
+    "Name": "name",
+    "City": "city",
+    "Address": "address",
+    "Open_time": "open_time",
+    "Mrt": "mrt",
+    "Url": "url",
+    "telephone": "telephone",
+    "latitude": "latitude",
+    "longitude": "longitude",
+    "limit_time_hr_src": "limit_time_hr",
+    "average_spending_src": "average_spending",
+    "interior_style_src": "interior_style",
+    "music_style_src": "music_style",
+    "google_rating_src": "google_rating",
+    "meal_types_src": "meal_types",
+    "image_url": "image_url"
+  },
+
+  "enums": {
+    "Limited_time": {
+      "field": "limited_time",
+      "map": { "1": "限時", "0": "不限時" },
+      "default": null
+    },
+    "Socket": {
+      "field": "socket",
+      "map": { "1": "有插座", "0": "無插座" },
+      "default": null
+    },
+    "Minimum_charge": {
+      "field": "minimum_charge",
+      "map": { "1": "有低消", "0": "無低消" },
+      "default": null
+    },
+    "Pet_friendly": {
+      "field": "pet_friendly",
+      "map": { "1": "寵物友善", "0": "不提供" },
+      "default": null
+    },
+    "Outdoor_seating": {
+      "field": "outdoor_seating",
+      "map": { "1": "有戶外座", "0": "無戶外座" },
+      "default": null
+    },
+    "Reservation": {
+      "field": "reservation",
+      "map": { "1": "可預約", "0": "不可預約" },
+      "default": null
+    },
+    "Eco_certified": {
+      "field": "eco_certified",
+      "map": { "1": "環保認證", "0": "無認證" },
+      "default": null
+    }
+  },
+
+  "scores": {
+    "Wifi":  { "field": "wifi",  "scale": [1, 5], "higher_is_better": true, "default": 3 },
+    "Seat":  { "field": "seat",  "scale": [1, 5], "higher_is_better": true, "default": 3 },
+    "Quiet": { "field": "quiet", "scale": [1, 5], "higher_is_better": true, "default": 3 },
+    "Tasty": { "field": "tasty", "scale": [1, 5], "higher_is_better": true, "default": 3 },
+    "Cheap": { "field": "cheap", "scale": [1, 5], "higher_is_better": true, "default": 3 },
+    "Music": { "field": "music", "scale": [1, 5], "higher_is_better": true, "default": 3 }
+  },
+
+  "page_content_template": "咖啡廳名稱：{Name}\\n城市：{City}\\n地址：{Address}\\n營業時間：{Open_time}\\n限時與否：{Limited_time}\\n限制時間(小時)：{limit_time_hr_src}\\n插座資訊：{Socket}\\n低消：{Minimum_charge}\\n寵物友善：{Pet_friendly}\\n戶外座位：{Outdoor_seating}\\n預約：{Reservation}\\n環保標章：{Eco_certified}\\n餐點類型：{meal_types_src}\\n室內風格：{interior_style_src}\\n音樂風格：{music_style_src}\\nGoogle評分：{google_rating_src}\\n安靜程度：{Quiet}\\n美味程度：{Tasty}\\n價格實惠：{Cheap}\\n座位評價：{Seat}\\nWiFi穩定：{Wifi}\\n音樂氛圍：{Music}\\n鄰近捷運站：{Mrt}\\n平均消費：{average_spending_src}\\n網址：{Url}\\n電話：{telephone}\\n經緯度：({latitude},{longitude})\\n圖片：{image_url}\\n"
+}

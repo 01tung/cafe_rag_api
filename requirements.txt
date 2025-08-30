@@ -1,0 +1,12 @@
+flask==3.0.3
+flask-cors==4.0.0
+python-dotenv==1.0.1
+
+langchain-community==0.2.9
+langchain-openai==0.1.21
+qdrant-client==1.9.2
+sentence-transformers==2.7.0
+transformers==4.43.3
+torch==2.3.1
+tokenizers==0.15.2
+gunicorn==22.0.0

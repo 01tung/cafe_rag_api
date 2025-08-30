@@ -1,12 +1,23 @@
-flask==3.0.3
-flask-cors==4.0.0
+# --- 基本 Web / 工具 ---
+flask==3.0.2
+gunicorn==21.2.0
 python-dotenv==1.0.1
 
-langchain-community==0.2.9
-langchain-openai==0.1.21
-qdrant-client==1.9.2
-sentence-transformers==2.7.0
+# --- LangChain / Qdrant ---
+langchain==0.2.7
+langchain-community==0.2.7
+langchain-openai==0.1.8
+qdrant-client==1.8.2
+
+# --- 向量＆HuggingFace 相關（你在 app.py 用 HuggingFaceEmbeddings）---
 transformers==4.43.3
-torch==2.3.1
-tokenizers==0.15.2
-gunicorn==22.0.0
+sentence-transformers==2.7.0
+accelerate==0.33.0
+
+# numpy 2.x 有時會跟舊 wheel 衝突，保守起見鎖一下
+numpy<2.0
+
+# --- 重點：使用 CPU 版 PyTorch，並指定官方 whl index ---
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+
